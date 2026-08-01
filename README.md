@@ -62,3 +62,7 @@ npm run dev:demo
 | ![知华科技微信咨询二维码一](docs/images/zhuatech-wechat-consulting.png) | ![知华科技微信咨询二维码二](docs/images/zhuatech-wechat-consulting-2.png) |
 
 SEO 关键词：DLP 系统源码、数据防泄漏、敏感数据识别、数据分类分级、终端数据安全、邮件防泄漏、Java DLP、Vue 数据安全、知华科技。
+
+## 数据外发策略判断
+
+新增 `POST /api/admin/egress-policy`，综合数据分类、外发渠道、外部接收人、加密状态、记录数量和例外审批，输出 `ALLOW / REVIEW / BLOCK`。受限数据的大批量未加密外发会被阻断并通知安全负责人。

@@ -9,3 +9,4 @@
 | GET | `/api/admin/work-orders` | 数据事件清单 |
 | GET | `/api/shopfloor/dashboard` | 工程师任务工作台 |
 | POST | `/api/shopfloor/work-orders/{id}/reports` | 提交核验结果 |
+| POST | `/api/admin/egress-policy` | 数据外发策略决策 |
