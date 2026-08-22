@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 export const domain={
  code:'DLP',systemName:'数据防泄漏管理平台',englishName:'DATA LOSS PREVENTION',theme:{primary:'#586079',dark:'#303543',accent:'#b87947'},
  workspace:'数据安全部 / 防护运营中心',fieldWorkspace:'敏感数据运营组',period:'2026-08-01 · 日常监测',liveText:'数据通道策略于 10:36 同步',fieldContextLabel:'当前防护域',fieldContext:'办公终端 · 生产策略',fieldUser:'林岚',fieldRole:'数据安全专员',adminUser:'周序',adminRole:'数据安全负责人',
