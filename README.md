@@ -70,3 +70,7 @@ SEO 关键词：DLP 系统源码、数据防泄漏、敏感数据识别、数据
 ## 大批量传输风险
 
 新增 `POST /api/dlp/insights/bulk-transfer-risk`。接口结合数据分级、记录数量、目标可信度、加密审批、异常行为及可移动介质等信号生成风险分，并返回 `ALLOW`、`REVIEW` 或 `BLOCK`，为批量导出和外发任务提供一致的策略门禁。
+
+## 企业级 DLP 策略例外治理
+
+新增 `POST /api/enterprise/dlp/policy-exception`，覆盖业务理由、责任审批、接收方、期限、加密、审计和撤销，返回 `APPROVE / REVIEW / BLOCKED`。详见 [策略例外说明](docs/ENTERPRISE_POLICY_EXCEPTION.md)。
