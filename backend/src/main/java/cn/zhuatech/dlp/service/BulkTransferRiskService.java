@@ -11,8 +11,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class BulkTransferRiskService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result evaluate(Request request) {
         int score = switch (request.classification()) {
             case "RESTRICTED" -> 45;
@@ -38,11 +44,17 @@ public class BulkTransferRiskService {
         return new Result(request.transferId(), score, decision, actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String transferId,
                           @Pattern(regexp = "PUBLIC|INTERNAL|CONFIDENTIAL|RESTRICTED") String classification,
                           @Min(0) long recordCount, boolean destinationTrusted,
                           boolean encrypted, boolean businessApproved,
                           @DecimalMin("0") @DecimalMax("1") double anomalyScore,
                           boolean removableMedia, boolean personalData) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String transferId, int riskScore, String decision, List<String> actions) {}
 }

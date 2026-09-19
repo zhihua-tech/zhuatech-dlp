@@ -6,11 +6,20 @@ import cn.zhuatech.dlp.service.EgressPolicyService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @RestController
 @RequestMapping("/api/admin")
 public class EgressPolicyController {
     private final EgressPolicyService service;
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public EgressPolicyController(EgressPolicyService service) { this.service = service; }
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @PostMapping("/egress-policy")
     public ApiResponse<EgressPolicyService.Result> evaluate(@Valid @RequestBody EgressPolicyService.Request request) {
         return ApiResponse.ok(service.evaluate(request));

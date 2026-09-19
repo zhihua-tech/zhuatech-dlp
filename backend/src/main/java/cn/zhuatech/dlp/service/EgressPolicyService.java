@@ -10,11 +10,17 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class EgressPolicyService {
     private static final Map<String, Integer> CLASSIFICATION_RISK = Map.of(
         "PUBLIC", 0, "INTERNAL", 20, "CONFIDENTIAL", 50, "RESTRICTED", 75);
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result evaluate(Request request) {
         String classification = request.classification().toUpperCase(Locale.ROOT);
         int score = CLASSIFICATION_RISK.getOrDefault(classification, 40)
@@ -30,9 +36,15 @@ public class EgressPolicyService {
         return new Result(classification, request.channel(), score, decision, controls);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String classification, @NotBlank String channel,
                           boolean recipientExternal, boolean encrypted,
                           @Min(0) int recordCount, boolean approvedException) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String classification, String channel, int riskScore,
                          String decision, List<String> controls) {}
 }
