@@ -1,0 +1,48 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "candidateWindowBytes": "#900000",
+      "remainingWindowBytes": "#100000"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "requestedBytes": "600001"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "overLimitBytes": "#1"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "requestedBytes": "600000"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "sensitive": "YES"
+    },
+    "expected": {
+      "decision": "REVIEW"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "destinationApproved": "NO"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  }
+]
